@@ -1,0 +1,721 @@
+:root {
+    --verde: #c1ff72;
+    --roxo: #661686;
+    /* Roxo principal  */
+    --roxo-secundario: #816381;
+    /* Roxo escuro para rodapé/fundo */
+    --border: 0.2rem solid #8de078;
+    /* Borda Verde */
+    --card-background: #ffffff;
+    /* Fundo dos cards brancos */
+    --text-color: #333;
+    /* Texto escuro padrão */
+    --roxo-claro: #d8c0d8;
+    /* Para fundos de boxes e texto em destaque */
+    --roxo-medio: #b390b3;
+    /* Para o estado 'selecionado' */
+    --roxo-forte: #4d0a63;
+    /* Para títulos e textos principais dentro do box */
+    --fundo-body: #f4f4f4;
+    /* Cor mais neutra para o body */
+    --fundo-secundario: #c6adcc;
+    /* Fundo de seções específicas */
+    --sombra-clara: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --texto-contraste: #fff;
+    /* Cor do texto quando o fundo é escuro */
+      font-size: 62.5%;
+    /* 1rem = 10px */
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: 0.2s linear;
+    font-family: "roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fundo-body);
+   
+}
+
+
+section {
+    padding: 8rem 0;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%; 
+}
+
+
+.section-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;  
+}
+
+.title {
+    font-size: 5rem;
+    color: var(--roxo-forte);
+    text-align: center;
+    padding: 0 0 3rem;
+}
+
+.title span {
+    color: var(--verde);
+}
+
+/* botão */
+.btn,
+.btn-header,
+.add-btn,
+.btn-finalizar {
+    background: var(--verde);
+    color: var(--text-color);
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* animação de botão */
+.btn:hover,
+.btn-header:hover,
+.add-btn:hover,
+.btn-finalizar:hover {
+    letter-spacing: 0.1rem;
+    opacity: 0.9;
+}
+
+/* --- Seção Header--- */
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    border-bottom: var(--border);
+    background-color: var(--roxo);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+}
+
+/* barra de navegação */
+.navbar a {
+    margin: 0 1.5rem;
+    font-size: 1.8rem;
+    color: #faf3f3;
+}
+
+.navbar a:hover {
+    color: var(--verde);
+    border-bottom: 0.1rem solid var(--verde);
+    padding-bottom: 0.5rem;
+}
+
+.btn-nav a {
+    padding: 0.8rem 2.5rem;
+    margin-top: 0;
+    display: block;
+}
+
+.home {
+    background: url("../img/banner2.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 0;
+    margin-top: -8.7rem;
+}
+
+.home-container {
+    max-width: 120rem;
+    padding: 15rem 2rem 5rem;
+    margin: 0 auto;
+    margin-left: 2rem;
+    width: 100%;
+}
+
+.home .content {
+    max-width: 45rem;
+    padding: 0;
+    text-align: left;
+}
+
+.home .content h1 {
+    color: #f0d6fd;
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+
+.home .content .subtitle {
+    color: var(--verde);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.home .content p {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.7;
+    padding: 1rem 0;
+}
+
+
+.about {
+    background-color: var(--fundo-secundario);
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background-color: #775580;
+    gap: 3rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra-clara);
+}
+
+.about .container_imagem {
+    flex: 1 1 40rem;
+    text-align: center;
+}
+
+.about .container_imagem img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about .content {
+    flex: 1 1 40rem;
+    padding: 2rem 0;
+}
+
+.about .content h3 {
+    font-size: 3rem;
+    color: #baf8b5;
+    margin-bottom: 1rem;
+}
+
+.about .content p {
+    font-size: 2rem;
+    color: #ffffff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+/* --- SEÇÃO MENU (Cardápio) --- */
+
+.menu {
+    background-color: var(--fundo-body);
+}
+
+.category-title {
+    font-size: 3.5rem;
+    color: var(--text-color);
+    margin: 4rem 0 2rem;
+    padding-left: 0;
+    border-bottom: 2px solid var(--roxo-secundario);
+    display: block;
+    width: 100%;
+}
+
+.menu .box_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 3rem;
+}
+
+.menu .box_container .menu-item {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    cursor: pointer;
+    background-color: var(--card-background);
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.menu .box_container .menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu .box_container .menu-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* TAG POPULAR */
+.menu-item .popular-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff3333;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    font-size: 1.2rem;
+    border-radius: 0.8rem 0 0.8rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu .box_container .menu-item h3 {
+    color: var(--text-color);
+    font-size: 2rem;
+    padding: 0 0 0.5rem;
+    text-transform: capitalize;
+}
+
+.menu .box_container .menu-item .description {
+    color: #777;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    min-height: 4.2rem;
+}
+
+.menu .box_container .menu-item .price {
+    color: var(--roxo-forte);
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    font-weight: bold;
+}
+
+.menu .box_container .menu-item .add-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.6rem;
+    width: 100%;
+    margin: 1rem 0 0;
+}
+
+/* --- SEÇÃO MONTE SEU AÇAÍ --- */
+.monte-acai-section {
+    background-color: var(--fundo-secundario);
+}
+
+.monte-acai-title {
+    font-size: 4.5rem;
+    color: var(--roxo-forte);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.monte-acai-subtitle {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--roxo);
+    padding: 1rem 2rem;
+    margin: 0 auto 4rem;
+    max-width: 60rem;
+    border-radius: 3rem;
+    background-color: var(--roxo-claro);
+    color: var(--roxo-forte);
+}
+
+.monte-acai-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    background-color: var(--card-background);
+    border-radius: 1.5rem;
+    box-shadow: var(--sombra-clara);
+    padding: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.monte-acai-imagem {
+    flex: 1 1 50%;
+    max-width: 450px;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.monte-acai-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.monte-acai-form {
+    flex: 1 1 50%;
+    padding: 1rem;
+}
+
+.monte-acai-form .form-group {
+    margin-bottom: 3rem;
+}
+
+.monte-acai-form h3 {
+    text-align: left;
+    font-size: 2.2rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.opcoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1.5rem;
+}
+
+/* Estilo Base para as Opções  */
+.opcao-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    background-color: var(--roxo-claro);
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--roxo-forte);
+    min-height: 5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.opcao-item input[type="radio"],
+.opcao-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estilo para Opção Selecionada */
+.opcao-item:has(input:checked) {
+    background-color: var(--roxo-medio);
+    box-shadow: 0 0 0 0.3rem var(--roxo);
+    /* Borda roxa escura */
+    color: var(--texto-contraste);
+    /* Texto branco na seleção */
+}
+
+.opcao-item:has(input:checked) span,
+.opcao-item:has(input:checked) small {
+    color: var(--texto-contraste);
+    /* Texto branco na seleção para todos os spans */
+}
+
+.tamanhos-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.tamanhos-grid .opcao-item {
+    padding: 1.5rem 0.5rem;
+}
+
+.tamanhos-grid .opcao-item span:first-of-type {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.tamanhos-grid .opcao-item small {
+    display: block;
+    font-size: 1.3rem;
+    color: var(--roxo-forte);
+    margin-bottom: 0.5rem;
+}
+
+.tamanhos-grid .opcao-item span:last-of-type {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--roxo);
+}
+
+/* Estilos Específicos para Opções de Adicionais */
+.adicionais-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.adicional-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    font-size: 1.7rem;
+    min-height: auto;
+}
+
+.adicional-item span:first-of-type {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.adicional-item .adicional-preco {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--roxo);
+    margin-left: 1rem;
+}
+
+.adicional-item:has(input:checked) .adicional-preco {
+    color: var(--texto-contraste);
+    /* Preço branco na seleção */
+}
+
+/* Estilos para o Box Finalizar Pedido */
+.finalizar-pedido-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    background-color: var(--roxo-claro);
+    border-radius: 0.8rem;
+    margin-top: 3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.finalizar-pedido-box .btn-finalizar {
+    font-size: 1.6rem;
+    padding: 1.2rem 2.5rem;
+}
+
+.finalizar-pedido-box .preco-total {
+    font-size: 1.8rem;
+    color: var(--roxo-forte);
+    font-weight: 500;
+}
+
+.finalizar-pedido-box #valor-total {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--roxo);
+}
+
+/* --- Seção Review  --- */
+.review .box_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 2rem;
+    padding-bottom: 0;
+}
+
+.box-coment {
+    border-radius: 1rem;
+    border: #8de078 solid 3px;
+    background-color: #e2cfe2;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: var(--sombra-clara);
+}
+
+.box-coment blockquote p {
+    color: #450f70;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.box-coment img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--roxo);
+    margin-bottom: 1rem;
+}
+
+.box-coment figcaption {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--roxo);
+}
+  
+/* Estilos para o bloco de Estrelas na seção Review */
+.review .box-coment .stars {
+    color: var(--verde); /* Cor verde para as estrelas */
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.review .box-coment .stars .fas {
+    margin: 0 0.1rem;
+}
+
+/* --- Seção Footer  --- */
+footer {
+    background-color: var(--roxo-secundario);
+    padding: 0;
+}
+
+.footer-container {
+    padding: 3rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-info {
+    flex: 1 1 250px;
+    padding: 1rem 0;
+}
+
+.footer-info h3 {
+    color: var(--verde);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-info p,
+.footer-info li,
+.footer-info a {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.footer-info a:hover {
+    color: var(--verde);
+    text-decoration: underline;
+}
+
+.rodape {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.rodape p {
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header-container {
+        padding: 1rem 2rem;
+    }
+
+    .home .content h1 {
+        font-size: 5rem;
+    }
+
+    /* Ajuste para o header fixo não cobrir o conteúdo ao navegar */
+    section:not(.home) {
+        padding-top: 10rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .navbar {
+        display: none;
+    }
+
+    .home {
+        min-height: 70vh;
+    }
+
+    .home-container {
+        padding-top: 10rem;
+    }
+
+    .home .content h1 {
+        font-size: 4rem;
+    }
+
+    .monte-acai-container {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .monte-acai-imagem {
+        max-width: 100%;
+        order: -1;
+        /* Move a imagem para cima no mobile */
+    }
+
+    .menu .box_container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 50%;
+    }
+
+    .adicionais-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tamanhos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .review .box_container {
+        grid-template-columns: 1fr;
+    }
+
+    .finalizar-pedido-box {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .finalizar-pedido-box .btn-finalizar {
+        width: 100%;
+    }
+
+    .finalizar-pedido-box .preco-total {
+        font-size: 2rem;
+    }
+}
