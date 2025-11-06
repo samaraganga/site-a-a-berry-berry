@@ -138,7 +138,7 @@ section {
 }
 
 .home {
-    background: url("../img/banner2.png") no-repeat;
+    background: url("img/banner2.png") no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -718,4 +718,5 @@ footer {
     .finalizar-pedido-box .preco-total {
         font-size: 2rem;
     }
+
 }
